@@ -14,10 +14,6 @@ const mapContainerStyle = {
   height: "100%",
 };
 
-const defaultCenter = {
-  lat: 37.5665,
-  lng: 126.978,
-};
 
 function MapPage() {
   const location = useLocation();
@@ -34,6 +30,11 @@ function MapPage() {
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
     libraries,
   });
+
+const defaultCenter = {
+  lat: 37.4481,
+  lng: 126.6570,
+};
 
   const searchKeyword = useMemo(() => {
     return `${selectedMenu} 맛집`;
