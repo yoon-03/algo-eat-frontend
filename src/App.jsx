@@ -5,7 +5,10 @@ import Login from './Login';
 import Register from './Register'; 
 import MainPage from './MainPage';
 import UserPage from './UserPage';
-import TagPage from './TagPage'; //
+import TagPage from './TagPage'; 
+import MapPage from "./MapPage";
+import RecipePage from "./RecipePage";
+//
 
 function App() {
 
@@ -18,7 +21,9 @@ function App() {
         <Route path="/main" element={<MainPage />} />
         <Route path="/user" element={<UserPage />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/recipe" element={<RecipePage />} />
         <Route path="/tagpage" element={<TagPage />} />
+        <Route path="/map" element={<MapPage />} />
       </Routes>
     </Router>
   );

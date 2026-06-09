@@ -8,10 +8,12 @@ function Register() {
     gender: 'MALE', // 백엔드 Enum과 맞추기 위해 대문자 권장
     email: '', 
     password: '', 
+    nickname: '', 
     age: '', 
     height: '', 
     weight: '' 
   });
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   // 모든 입력 필드의 변화를 감지하여 formData를 업데이트하는 함수
   const handleChange = (e) => {
@@ -27,7 +29,7 @@ function Register() {
 
     try {
       // 백엔드 회원가입 API 호출
-      const response = await fetch("http://localhost:8080/api/user/signup", {
+      const response = await fetch(`${API_BASE_URL}/api/user/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -38,8 +40,8 @@ function Register() {
       if (response.ok) {
         const result = await response.text();
         console.log(result);
-        alert("정보 등록 성공! 추천 페이지로 이동합니다.");
-        navigate('/main'); 
+        alert("회원가입 성공! 로그인 페이지로 이동합니다.");
+        navigate('/'); 
       } else {
         alert("등록 실패: 이미 존재하는 이메일이거나 데이터 오류입니다.");
       }
