@@ -246,9 +246,6 @@ function MainPage() {
             >
               알고잇
             </h1>
-            <p className="text-xs text-gray-400 font-bold mt-1">
-              {nickname}님을 위한 맞춤 메뉴 추천
-            </p>
           </div>
 
           <button

@@ -394,7 +394,7 @@ function UserPage() {
 
             <div className="text-center">
               <h3 className="text-xl font-black text-gray-900">
-                5월 {selectedDate}일 식단
+                6월 {selectedDate}일 식단
               </h3>
               <p className="text-xs text-orange-500 font-black mt-1">
                 총 {getTotalCal(selectedDate).toFixed(0)} kcal
